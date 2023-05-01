@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- 根据宽度自适应 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>广告代码</title>
+    <style>
+        /* box元素的样式 */
+        .box {
+			width: 300px;
+			height: 300px;
+            position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+            border: 2px solid #ccc;
+        }
+        /* x元素的样式 */
+        .bth {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+			color: aqua;
+        }
+        /* 按钮组合的样式 */
+        .bottom-right {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            display: flex;
+            gap: 5px;
+        }
+        /* 通用按钮样式 */
+        .btn1 {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 5px 5px; /* 上下内边距，左右内边距 */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+		.btn2 {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 5px 5px; /* 上下内边距，左右内边距 */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+		img{
+			width: 300px;
+		}
+		body{
+			background-color: mediumturquoise;
+		}
+
+		a{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+    </style>
+</head>
+<body>
+	<a href="https://guowei321.github.io/smh/">水墨画</a>
+<div class="box">
+    <button class="bth">x</button><!-- 关闭按钮 -->
+	<img src="tup.jpg" alt="">
+    <div class="bottom-right"><!-- 按钮组合 -->
+        <button class="btn1">我也喜欢你</button>
+        <button class="btn2">我不喜欢你</button>
+    </div>
+</div>
+
+<script>
+//获取box盒子元素
+const box = document.querySelector('.box')
+//获取按钮‘x’元素
+const but = document.querySelector(".bth")
+//获取按钮‘我也喜欢你’
+const but1 = document.querySelector(".btn1")   // 修改此行
+//获取按钮‘我不喜欢你’
+const but2 = document.querySelector(".btn2")   // 修改此行
+
+//使用but元素,当用户点击按钮box元素就会隐藏
+but.addEventListener('click', () =>{
+    //box.style.display = 'none'
+	alert("再考虑一下别💕")
+})
+//使用but1元素。当用户点击按钮就会弹出字并退出弹窗
+but1.addEventListener('click', () =>{   // 修改此行
+	alert("我也爱你😘")
+	box.style.display = 'none'
+})
+//使用but1元素。当用户点击按钮就会弹出字并退出弹窗
+but2.addEventListener('click', () =>{   // 修改此行
+	alert("你太坏了😡,给你最后一次机会")
+})
+
+</script>
+</body>
+</html>
